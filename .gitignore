@@ -1,0 +1,17 @@
+﻿# Hide data generator - internal Ferret Labs tooling
+generator/
+
+# Python
+venv/
+__pycache__/
+*.pyc
+.env
+
+# Data files
+*.parquet
+*.csv
+*.json
+
+# OS
+.DS_Store
+Thumbs.db
