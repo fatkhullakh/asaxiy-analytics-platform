@@ -24,17 +24,17 @@ s3 = boto3.client(
     aws_secret_access_key=MINIO_SECRET,
 )
 
-def upload_folder(local_dir: Path, s3_prefix: str):
-    files = list(local_dir.glob("*"))
+def upload_folder(local_dir: Path, file_prefix: str, s3_prefix: str):
+    files = list(local_dir.glob(f"{file_prefix}*"))
     print(f"\n→ Uploading {len(files)} files to s3://{BUCKET}/{s3_prefix}/")
     for f in tqdm(files, desc=f"  {s3_prefix}"):
         s3_key = f"{s3_prefix}/{f.name}"
         s3.upload_file(str(f), BUCKET, s3_key)
     print(f"  ✓ {len(files)} files uploaded")
 
-# Upload payments
-upload_folder(PAY_DIR, "payments/payme")
-upload_folder(PAY_DIR, "payments/click")
+# Upload payments — filtered by actual filename prefix this time
+upload_folder(PAY_DIR, "payme_", "payments/payme")
+upload_folder(PAY_DIR, "click_", "payments/click")
 
 # Upload Google Ads CSV
 print(f"\n→ Uploading Google Ads CSV...")

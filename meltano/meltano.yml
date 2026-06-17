@@ -1,0 +1,24 @@
+default_environment: dev
+project_id: 019ed554-fd11-7c36-a964-3dc3bb58c614
+environments:
+- name: dev
+- name: staging
+- name: prod
+plugins:
+  extractors:
+  - name: tap-postgres
+    variant: meltanolabs
+    pip_url: meltanolabs-tap-postgres
+    config:
+      sqlalchemy_url: postgresql://asaxiy:asaxiy123@192.168.0.104:5432/asaxiy_source
+      filter_schemas:
+      - public
+    select:
+    - public-customers.*
+    - public-products.*
+    - public-orders.*
+    - public-order_items.*
+  loaders:
+  - name: target-jsonl
+    variant: andyh1203
+    pip_url: target-jsonl
