@@ -1,0 +1,134 @@
+[0m04:07:31.965600 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FBC3176510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FBC5757ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FBC5757890>]}
+
+
+============================== 04:07:31.990165 | 4d6afd1d-2165-4d27-bb09-c3f03b34a04b ==============================
+[0m04:07:31.990165 [info ] [MainThread]: Running with dbt=1.12.0-b3
+[0m04:07:31.991169 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\Fatih\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt init asaxiy_dbt', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m04:07:32.030175 [debug] [MainThread]: Starter project path: C:\DE\asaxiy-analytics\venv\Lib\site-packages\dbt\include\starter_project
+[0m04:07:32.061827 [info ] [MainThread]: Setting up your profile.
+[0m04:08:26.982046 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m04:08:26.982539 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m04:08:26.983377 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m04:09:04.326518 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+
+[0m04:09:04.349121 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\DE\asaxiy-analytics\venv\Lib\site-packages\dbt\cli\requires.py", line 190, in wrapper
+    result, success = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "C:\DE\asaxiy-analytics\venv\Lib\site-packages\dbt\cli\requires.py", line 136, in wrapper
+    return func(*args, **kwargs)
+  File "C:\DE\asaxiy-analytics\venv\Lib\site-packages\dbt\cli\main.py", line 503, in init
+    results = task.run()
+  File "C:\DE\asaxiy-analytics\venv\Lib\site-packages\dbt\task\init.py", line 360, in run
+    self.setup_profile(profile_name)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\DE\asaxiy-analytics\venv\Lib\site-packages\dbt\task\init.py", line 264, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\DE\asaxiy-analytics\venv\Lib\site-packages\dbt\task\init.py", line 181, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\DE\asaxiy-analytics\venv\Lib\site-packages\dbt\task\init.py", line 165, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+  File "C:\DE\asaxiy-analytics\venv\Lib\site-packages\dbt\task\init.py", line 118, in generate_target_from_input
+    target = self.generate_target_from_input(
+        profile_template_local[key][choice], target
+    )
+  File "C:\DE\asaxiy-analytics\venv\Lib\site-packages\dbt\task\init.py", line 131, in generate_target_from_input
+    target[key] = click.prompt(
+                  ~~~~~~~~~~~~^
+        text, default=default, hide_input=hide_input, type=type
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\DE\asaxiy-analytics\venv\Lib\site-packages\click\termui.py", line 179, in prompt
+    value = prompt_func(prompt)
+  File "C:\DE\asaxiy-analytics\venv\Lib\site-packages\click\termui.py", line 162, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m04:09:04.351179 [debug] [MainThread]: Command `dbt init` failed at 04:09:04.350878 after 92.59 seconds
+[0m04:09:04.351760 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FBC5CB1A70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FBC5CED370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FBC5AADAE0>]}
+[0m04:09:04.352325 [debug] [MainThread]: Flushing usage events
+[0m04:09:05.158187 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m04:09:13.386999 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000117C2CD6510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000117C52BBED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000117C52BB890>]}
+
+
+============================== 04:09:13.397243 | 0d9aaab7-bc4b-4740-a5a7-08a653fe3814 ==============================
+[0m04:09:13.397243 [info ] [MainThread]: Running with dbt=1.12.0-b3
+[0m04:09:13.398084 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'version_check': 'True', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Fatih\\.dbt', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt init asaxiy_dbt', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m04:09:13.430734 [info ] [MainThread]: A project called asaxiy_dbt already exists here.
+[0m04:09:13.432181 [debug] [MainThread]: Command `dbt init` succeeded at 04:09:13.431992 after 0.30 seconds
+[0m04:09:13.432596 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000117C53083E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000117C50E7650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000117C5287680>]}
+[0m04:09:13.433079 [debug] [MainThread]: Flushing usage events
+[0m04:09:14.191376 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m04:10:29.555299 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002917734A510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002917993BED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002917993B890>]}
+
+
+============================== 04:10:29.565213 | ed2e71ee-9b85-4712-83be-5354d27d4f49 ==============================
+[0m04:10:29.565213 [info ] [MainThread]: Running with dbt=1.12.0-b3
+[0m04:10:29.566805 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'version_check': 'True', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\Fatih\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt init asaxiy_dbt', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m04:10:29.601016 [debug] [MainThread]: Starter project path: C:\DE\asaxiy-analytics\venv\Lib\site-packages\dbt\include\starter_project
+[0m04:10:29.621580 [info ] [MainThread]: Setting up your profile.
+[0m04:10:31.636855 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m04:10:31.637375 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m04:10:31.637695 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m04:11:33.862862 [info ] [MainThread]: Profile asaxiy_dbt written to C:\Users\Fatih\.dbt\profiles.yml using target's profile_template.yml and your supplied values.
+[0m04:11:33.865740 [info ] [MainThread]: Running dbt debug to validate the project...
+[0m04:11:33.866766 [info ] [MainThread]: dbt version: 1.12.0-b3
+[0m04:11:33.867574 [info ] [MainThread]: python version: 3.13.1
+[0m04:11:33.868563 [info ] [MainThread]: python path: C:\DE\asaxiy-analytics\venv\Scripts\python.exe
+[0m04:11:33.869396 [info ] [MainThread]: os info: Windows-11-10.0.22631-SP0
+[0m04:11:34.014399 [info ] [MainThread]: Using profiles dir at C:\Users\Fatih\.dbt
+[0m04:11:34.014998 [info ] [MainThread]: Using profiles.yml file at C:\Users\Fatih\.dbt\profiles.yml
+[0m04:11:34.015510 [info ] [MainThread]: Using dbt_project.yml file at C:\DE\asaxiy-analytics\asaxiy_dbt\dbt_project.yml
+[0m04:11:34.016063 [info ] [MainThread]: adapter type: spark
+[0m04:11:34.016592 [info ] [MainThread]: adapter version: 1.10.2
+[0m04:11:34.155066 [info ] [MainThread]: Configuration:
+[0m04:11:34.155808 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m04:11:34.156490 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m04:11:34.157015 [info ] [MainThread]: Required dependencies:
+[0m04:11:34.157513 [debug] [MainThread]: Executing "git --help"
+[0m04:11:34.197964 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m04:11:34.198542 [debug] [MainThread]: STDERR: "b''"
+[0m04:11:34.198933 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m04:11:34.199508 [info ] [MainThread]: Connection:
+[0m04:11:34.200170 [info ] [MainThread]:   host: 192.168.0.104
+[0m04:11:34.201018 [info ] [MainThread]:   port: 10000
+[0m04:11:34.201748 [info ] [MainThread]:   cluster: None
+[0m04:11:34.202488 [info ] [MainThread]:   endpoint: None
+[0m04:11:34.203007 [info ] [MainThread]:   schema: default
+[0m04:11:34.203824 [info ] [MainThread]:   organization: 0
+[0m04:11:34.205530 [info ] [MainThread]: Registered adapter: spark=1.10.2
+[0m04:11:34.527970 [debug] [MainThread]: Acquiring new spark connection 'debug'
+[0m04:11:34.528451 [debug] [MainThread]: Using spark connection "debug"
+[0m04:11:34.528772 [debug] [MainThread]: On debug: select 1 as id
+[0m04:11:34.529050 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m04:11:38.137263 [debug] [MainThread]: Spark adapter: Poll status: 2, query complete
+[0m04:11:38.137953 [debug] [MainThread]: SQL status: OK in 3.609 seconds
+[0m04:11:38.140074 [debug] [MainThread]: On debug: Close
+[0m04:11:38.260295 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m04:11:38.261192 [info ] [MainThread]: [32mAll checks passed![0m
+[0m04:11:38.261906 [info ] [MainThread]: Your new dbt project "asaxiy_dbt" was created!
+Initialized new project in C:\DE\asaxiy-analytics\asaxiy_dbt\asaxiy_dbt
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m04:11:38.263418 [debug] [MainThread]: Command `dbt init` succeeded at 04:11:38.263214 after 68.89 seconds
+[0m04:11:38.263852 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m04:11:38.264248 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029179FA3BB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029179767650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000029179FAF130>]}
+[0m04:11:38.264644 [debug] [MainThread]: Flushing usage events
+[0m04:11:39.150912 [debug] [MainThread]: An error was encountered while trying to flush usage events
